@@ -1,5 +1,5 @@
 class DockingStation
-  DEFAULT_CAPACITY = 10
+  DEFAULT_CAPACITY = 20
 
   def initialize(options = {})
     @capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
@@ -11,7 +11,7 @@ class DockingStation
   end
 
   def dock(bike)
-    # if the capacity is reached, raise an expection
+    # if the capacity is reached, raise an error
     raise "Station is full" if full?
     @bikes << bike
   end

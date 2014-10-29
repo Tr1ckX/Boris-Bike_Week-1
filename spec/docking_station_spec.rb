@@ -3,10 +3,10 @@ require 'docking_station'
 describe DockingStation do
 
   let(:bike) {Bike.new}
-  let(:station) {DockingStation.new(capacity: 20)}
+  let(:station) {DockingStation.new}
 
   def fill_station(station)
-    20.times { station.dock(bike) }
+    20.times { station.dock(Bike.new) }
   end
 
   it 'should accept a bike' do
@@ -38,7 +38,7 @@ describe DockingStation do
   end
 
   it "should provide the list of the available bikes" do
-    working_bike, broken_bike = Bike.new, Bike.new
+    working_bike,broken_bike = Bike.new, Bike.new
     broken_bike.break!
     station.dock(working_bike)
     station.dock(broken_bike)
