@@ -23,12 +23,12 @@ shared_examples 'bike_container' do
 
   it 'should know when it is full' do
     expect(holder).not_to be_full
-    20.times {holder.dock(bike)}
+    holder.capacity.times {holder.dock(bike)}
     expect(holder).to be_full
   end
 
   it 'should not accept bike if it is full' do
-    20.times {holder.dock(bike)}
+    holder.capacity.times {holder.dock(bike)}
     expect(lambda {holder.dock(bike)}).to raise_error(RuntimeError)
   end
 

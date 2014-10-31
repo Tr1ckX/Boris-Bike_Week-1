@@ -40,16 +40,17 @@ module BikeContainer
   end
 
   def collect_broken_bikes_from(container)
-    container.bikes_to_repair.each do |one_broken_bike|
-      container.release(one_broken_bike)
-      self.dock(one_broken_bike)
-    end
+    collect_bikes(container.bikes_to_repair, container)
   end
 
   def collect_working_bikes_from(container)
-    container.available_bikes.each do |one_working_bike|
-      container.release(one_working_bike)
-      self.dock(one_working_bike)
+    collect_bikes(container.available_bikes, container)
+  end
+
+  def collect_bikes(bikes, container)
+      bikes.each do |one_working_bike|
+        container.release(one_working_bike)
+        self.dock(one_working_bike)
     end
   end
 

@@ -10,7 +10,7 @@ class Garage
 
   def repair(bikes_to_repair)
     bikes_to_repair.each do |one_broken_bike|
-      fix!(one_broken_bike)
+      one_broken_bike.fix!
     end
   end
 

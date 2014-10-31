@@ -21,10 +21,10 @@ describe Garage do
   end
 
   it "should repair the broken bikes" do
-    garage.repair(broken_bike)
-    expect(broken_bike).not_to be_broken
-
+    garage.dock(broken_bike)
+    garage.dock(working_bike)
+    expect(broken_bike).to receive(:fix!)
+    expect(working_bike).not_to receive(:fix!)
+    garage.repair(garage.bikes)
   end
-
-
 end

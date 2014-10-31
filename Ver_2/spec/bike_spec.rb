@@ -10,12 +10,9 @@ describe Bike do
   #this is a specific behaviour
   it 'is not broken when created' do
     
-    bike = Bike.new # initialize a new object of Bike class
-    
     #expect a instance of this class to have a method "broken?" that should return false
     expect(bike).not_to be_broken
     expect(bike.broken?).to be false
-  
   end
 
   it 'should be able to break' do
