@@ -9,7 +9,6 @@ describe Garage do
   let(:working_bike) {double :bike, broken?: false}
   let(:broken_bike) {double :bike, broken?: true}
   let(:container_holds_broken_bikes) {double :container, bikes_to_repair: [broken_bike]}
-  let(:container_holds_working_bikes) {double :container, available_bikes: [working_bike]}
 
   it "should allow setting the garage's default capacity on initialising" do
     expect(garage.capacity).to eq(50)

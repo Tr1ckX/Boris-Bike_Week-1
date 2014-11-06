@@ -9,7 +9,7 @@ describe Bike do
 
   #this is a specific behaviour
   it 'is not broken when created' do
-    
+
     #expect a instance of this class to have a method "broken?" that should return false
     expect(bike).not_to be_broken
     expect(bike.broken?).to be false
@@ -27,5 +27,3 @@ describe Bike do
   end
 
 end
-
-

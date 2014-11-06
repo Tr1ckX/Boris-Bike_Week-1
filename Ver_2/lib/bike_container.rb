@@ -6,12 +6,12 @@ module BikeContainer
     @bikes ||= []
   end
 
-  def capacity
-    @capacity ||= DEFAULT_CAPACITY
-  end
-
   def capacity=(value)
     @capacity = value
+  end
+
+  def capacity
+    @capacity ||= DEFAULT_CAPACITY
   end
 
   def bike_count
@@ -40,17 +40,19 @@ module BikeContainer
   end
 
   def collect_broken_bikes_from(container)
-    collect_bikes(container.bikes_to_repair, container)
+    bikes = container.bikes_to_repair
+    collect_bikes(bikes, container)
   end
 
   def collect_working_bikes_from(container)
-    collect_bikes(container.available_bikes, container)
+    bikes = container.available_bikes
+    collect_bikes(bikes, container)
   end
 
   def collect_bikes(bikes, container)
-      bikes.each do |one_working_bike|
-        container.release(one_working_bike)
-        self.dock(one_working_bike)
+      bikes.each do |bike|
+      container.release(bike)
+      self.dock(bike)
     end
   end
 
