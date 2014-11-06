@@ -16,4 +16,8 @@ describe DockingStation do
     expect(container_holds_working_bikes).to receive(:release).with(working_bike)
     station.collect_working_bikes_from(container_holds_working_bikes)
   end
+
+  it 'should release only working bike to person' do
+    
+  end
 end

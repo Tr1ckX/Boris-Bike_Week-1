@@ -1,5 +1,5 @@
  #load BikeContainer
- 
+
  require_relative 'bike_container'
 
 
@@ -12,10 +12,14 @@ class DockingStation
 =begin
     self.capacity is calling the capacity=() method (note the equals sign)
     defined in BikeContainer
-    capacity (the second argument to fetch()) is calling the capacity() method in 
+    capacity (the second argument to fetch()) is calling the capacity() method in
     BikeContainer
 =end
   self.capacity = options.fetch(:capacity, capacity)
+  end
+
+  def release_a_working_bike
+    available_bikes.pop
   end
 
 end
