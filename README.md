@@ -7,7 +7,7 @@ Boris-Bike
 </div>
 <br>
 
-<h5> First week at [Makers Academy](https://www.makersacademy.com) 
+<h5> First week at [Makers Academy](http://www.makersacademy.com) 
 
 Learning the Object Oriented Programming, creating the software for the London bike rental service.
   - using CRC cards and Kanban
