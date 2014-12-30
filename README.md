@@ -1,4 +1,4 @@
-Boris-Bike - Week 1
+Boris-Bike
 ==========
 <div>
 <img src = https://img.shields.io/badge/%20-GitHub-orange.svg>
